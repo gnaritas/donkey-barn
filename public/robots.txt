@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://donkey-barn-production.up.railway.app/sitemap.xml

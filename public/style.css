@@ -1,0 +1,174 @@
+/* The Donkey Barn — custom denim×hay honky-tonk design (marquee bulbs, rope stitching, poster hero), hand-rolled, no third-party anything */
+:root{
+  --night:#131a2c; --denim:#1c2740; --denim2:#243352; --deep:#0e1424;
+  --bone:#f4efe1; --mist:#aeb6c4; --line:rgba(244,239,225,.14);
+  --hay:#e9b64c; --hay2:#f3cd74; --hayink:#1a1408;
+  --rust:#c0533a; --stitch:rgba(233,182,76,.55);
+  --sans:"Helvetica Neue",Helvetica,Arial,"Segoe UI",system-ui,sans-serif;
+  --serif:Georgia,"Times New Roman",serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--denim);color:var(--bone);font-family:var(--sans);font-size:17px;line-height:1.65}
+h1,h2,h3,h4,p,ul,ol,figure{margin:0}
+p{margin-bottom:16px}
+p:last-child{margin-bottom:0}
+a{color:var(--hay)}
+a:hover{color:var(--hay2)}
+.wrap{max-width:1120px;margin-left:auto;margin-right:auto;padding-left:24px;padding-right:24px}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:12px;top:12px;background:var(--hay);color:var(--hayink);padding:10px 16px;border-radius:8px;z-index:9}
+
+/* header + marquee bulb strip */
+.bar{background:var(--deep);border-bottom:1px solid var(--line);position:relative}
+.bar::after{content:"";display:block;height:8px;background:radial-gradient(circle,var(--hay) 0 3.1px,rgba(233,182,76,.16) 3.6px,transparent 4.4px);background-size:22px 8px;background-position:6px 1px}
+.bar .wrap{display:flex;align-items:center;gap:26px;padding-top:15px;padding-bottom:14px;flex-wrap:wrap}
+.mark{color:var(--bone);text-decoration:none;font-family:var(--serif);font-weight:700;font-size:20px;letter-spacing:.1em;text-transform:uppercase;line-height:1.08}
+.mark i{display:inline-block;width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:12px solid var(--hay);margin-right:10px;vertical-align:1px}
+.mark small{display:block;font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.16em;color:var(--mist);margin-top:3px}
+.bar nav{margin-left:auto;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.bar nav a.nl{color:var(--mist);text-decoration:none;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.bar nav a.nl:hover,.bar nav a.nl[aria-current]{color:var(--bone)}
+.call{background:var(--hay);color:var(--hayink) !important;text-decoration:none;font-weight:800;font-size:14px;padding:10px 18px;border-radius:4px;white-space:nowrap;letter-spacing:.04em}
+.call:hover{background:var(--hay2);color:var(--hayink) !important}
+
+/* poster hero */
+.hero{position:relative;background:linear-gradient(180deg,var(--deep) 0%,var(--night) 48%,var(--denim) 100%);overflow:hidden;border-bottom:1px solid var(--line);text-align:center}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,transparent 0 22px,rgba(233,182,76,.04) 22px 24px)}
+.hero::after{content:"";position:absolute;left:50%;bottom:-240px;transform:translateX(-50%);width:680px;height:420px;border-radius:50%;background:radial-gradient(ellipse at center,rgba(233,182,76,.16),transparent 66%)}
+.hero .wrap{position:relative;padding-top:84px;padding-bottom:82px}
+.kicker{display:inline-block;border:1px solid var(--stitch);color:var(--hay);font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;padding:8px 16px;border-radius:999px;margin-bottom:28px}
+.slogan{font-family:var(--serif);font-size:clamp(38px,6.2vw,78px);line-height:1.04;font-weight:700;letter-spacing:.02em;text-transform:uppercase;margin-bottom:16px}
+.slogan em{font-style:italic;color:var(--hay);letter-spacing:.01em}
+.lede{max-width:660px;color:var(--mist);font-size:18px;margin-left:auto;margin-right:auto;margin-top:18px;margin-bottom:30px}
+.btnrow{display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:center}
+.btn{display:inline-block;background:var(--hay);color:var(--hayink) !important;text-decoration:none;font-weight:800;padding:13px 26px;border-radius:4px;font-size:15px;letter-spacing:.03em}
+.btn:hover{background:var(--hay2);color:var(--hayink) !important}
+.btn.alt{background:transparent;border:1px solid var(--line);color:var(--bone) !important}
+.btn.alt:hover{border-color:var(--hay);color:var(--hay) !important}
+
+/* sections */
+main>section{padding:58px 0;border-bottom:1px solid var(--line)}
+main>section.tight{padding:44px 0}
+.no-line{border-bottom:0 !important}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--hay);margin-bottom:12px}
+.eyebrow.rust{color:var(--rust)}
+h2{font-family:var(--serif);font-size:clamp(26px,3.4vw,38px);line-height:1.14;font-weight:700;letter-spacing:.01em;margin-bottom:18px}
+.sub{color:var(--mist);max-width:640px;font-size:17px}
+.sub.wide{max-width:720px}
+.btnrow.mt{margin-top:22px}
+.rope{height:10px;background:repeating-linear-gradient(135deg,var(--stitch) 0 6px,transparent 6px 14px);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:0;opacity:.5}
+
+/* ticket stub band */
+.ticket{display:flex;align-items:center;gap:24px;background:var(--night);border:1px solid var(--line);border-left:4px solid var(--hay);border-radius:8px;padding:22px 26px;position:relative;overflow:hidden}
+.ticket b{font-family:var(--serif);font-size:19px;letter-spacing:.02em;white-space:nowrap}
+.ticket span{color:var(--mist);font-size:15px}
+.ticket::before{content:"";position:absolute;left:236px;top:0;bottom:0;width:0;border-left:2px dashed rgba(244,239,225,.22)}
+
+/* cards — chalk setlist panels */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:26px}
+.card{background:var(--night);border:1px solid var(--line);border-top:3px solid var(--hay);border-radius:8px 8px 14px 14px;padding:24px;position:relative}
+.card.rusttop{border-top-color:var(--rust)}
+.card .tagnum{display:inline-block;font-family:var(--serif);font-style:italic;color:var(--hay);font-size:14px;letter-spacing:.14em;text-transform:uppercase}
+.card h3{font-family:var(--serif);font-size:21px;margin:10px 0 10px;line-height:1.2}
+.card h3 a{color:var(--bone);text-decoration:none}
+.card h3 a:hover{color:var(--hay)}
+.card p{color:var(--mist);font-size:15px}
+.card .go{display:inline-block;margin-top:12px;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--hay)}
+.card .go:hover{color:var(--hay2)}
+
+/* trust strip */
+.strip{display:flex;gap:18px;align-items:center;flex-wrap:wrap;background:var(--night);border:1px solid var(--line);border-radius:8px;padding:18px 24px}
+.strip .stars{color:var(--hay);font-size:20px;letter-spacing:4px;white-space:nowrap}
+.strip p{margin:0;color:var(--mist);font-size:15px}
+
+/* hours + map duo */
+.duo{display:grid;grid-template-columns:1.25fr .9fr;gap:22px;margin-top:26px}
+figure.map{margin:0;min-width:0}
+figure.map iframe{display:block;width:100%;height:420px;border:1px solid var(--line);border-radius:8px;background:var(--night)}
+figure.placecard{margin:0;background:var(--night);border:1px solid var(--line);border-top:3px solid var(--hay);border-radius:8px;padding:24px;min-width:0}
+figure.placecard h3{font-family:var(--serif);font-size:20px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:12px}
+figure.placecard p{color:var(--mist);font-size:15px;margin-bottom:14px}
+.hours{width:100%;border-collapse:collapse;margin-top:4px}
+.hours caption{text-align:left;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--mist);margin-bottom:10px}
+.hours td{padding:7px 18px 7px 0;border-bottom:1px dashed var(--line);font-size:15px}
+.hours tr td:last-child{text-align:right;white-space:nowrap;color:var(--bone)}
+.hours td:first-child{color:var(--mist)}
+.note{font-size:14px;color:var(--mist);margin-top:14px}
+
+/* breadcrumbs */
+.crumbs{font-size:13px;color:var(--mist);padding:18px 0 0}
+.crumbs a{color:var(--mist);text-decoration:underline}
+.crumbs a:hover{color:var(--bone)}
+.crumbs span{margin:0 6px;color:var(--hay)}
+
+/* detail page header */
+.dhead{background:linear-gradient(180deg,var(--deep),var(--denim));text-align:left}
+.dhead .wrap{padding-top:8px;padding-bottom:52px}
+.dhead .crumbs{padding-top:0}
+.dhead h1{font-family:var(--serif);font-size:clamp(30px,4.6vw,54px);line-height:1.1;font-weight:700;letter-spacing:.01em;margin:22px 0 14px}
+.dhead h1 em{font-style:italic;color:var(--hay)}
+.dhead .sub{font-size:18px}
+
+/* faq */
+.faq{max-width:760px}
+.faq details{border:1px solid var(--line);border-radius:8px;padding:0;margin-bottom:12px;background:var(--night)}
+.faq summary{cursor:pointer;font-weight:700;padding:16px 46px 16px 20px;position:relative;list-style:none;font-size:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"＋";position:absolute;right:18px;top:50%;transform:translateY(-50%);color:var(--hay);font-weight:700}
+.faq details[open] summary::after{content:"－"}
+.faq .a{padding:0 20px 16px;color:var(--mist);font-size:15px}
+.faq .a p{margin-bottom:8px}
+
+/* act blocks on the experience hub */
+.act{display:grid;grid-template-columns:132px 1fr;gap:26px;align-items:start;border:1px solid var(--line);border-radius:8px;background:var(--night);padding:26px;margin-top:22px}
+.act .num{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--hay);letter-spacing:.12em;text-transform:uppercase;border-right:1px dashed var(--stitch);padding-right:20px;padding-top:4px}
+.act h3{font-family:var(--serif);font-size:24px;margin-bottom:10px}
+.act p{color:var(--mist);font-size:15.5px}
+.act a.go{display:inline-block;margin-top:8px;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--hay)}
+
+/* contact form */
+.cform{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:760px;background:var(--night);border:1px solid var(--line);border-top:3px solid var(--hay);border-radius:8px;padding:26px}
+.cform label{display:block;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--mist);margin-bottom:6px}
+.cform input,.cform textarea{width:100%;background:var(--deep);border:1px solid var(--line);border-radius:4px;color:var(--bone);font:inherit;font-size:15px;padding:11px 12px}
+.cform input:focus,.cform textarea:focus{outline:2px solid var(--hay);border-color:transparent}
+.cform textarea{min-height:140px;resize:vertical}
+.cform .full{grid-column:1/-1}
+.cform button{grid-column:1/-1;justify-self:start;background:var(--hay);color:var(--hayink);border:0;font-weight:800;font-size:15px;letter-spacing:.04em;padding:13px 28px;border-radius:4px;cursor:pointer}
+.cform button:hover{background:var(--hay2)}
+
+/* CTA band */
+.band{background:linear-gradient(120deg,var(--night),var(--deep));text-align:center}
+.band h2{margin-bottom:12px}
+.band p.lede{margin-bottom:26px}
+
+/* footer */
+footer{background:var(--deep);border-top:1px solid var(--line);padding:34px 0 40px}
+footer .wrap{display:flex;gap:22px;flex-wrap:wrap;align-items:baseline}
+.footline{font-size:13.5px;color:var(--mist);margin:0}
+.footline a{color:var(--mist);text-decoration:underline}
+.footline a:hover{color:var(--hay)}
+footer .social{margin-left:auto}
+footer .social a{font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--hay);text-decoration:none}
+footer .social a:hover{color:var(--hay2)}
+
+@media (max-width:900px){
+  .grid3{grid-template-columns:1fr 1fr}
+  .duo{grid-template-columns:1fr}
+  figure.map iframe{height:340px}
+  .act{grid-template-columns:1fr}
+  .act .num{border-right:0;border-bottom:1px dashed var(--stitch);padding:0 0 8px}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .grid3{grid-template-columns:1fr}
+  .bar nav{gap:14px}
+  .bar .wrap{padding-top:12px}
+  .hero .wrap{padding-top:64px;padding-bottom:64px}
+  .ticket{flex-direction:column;align-items:flex-start;gap:10px}
+  .ticket::before{display:none}
+  .ticket b{white-space:normal}
+  .cform{grid-template-columns:1fr}
+  .cform button{justify-self:stretch}
+  .strip{gap:10px}
+}
