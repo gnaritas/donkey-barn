@@ -145,6 +145,7 @@ figure.placecard p{color:var(--mist);font-size:15px;margin-bottom:14px}
 /* footer */
 footer{background:var(--deep);border-top:1px solid var(--line);padding:34px 0 40px}
 footer .wrap{display:flex;gap:22px;flex-wrap:wrap;align-items:baseline}
+.footline .nw{white-space:nowrap}
 .footline{font-size:13.5px;color:var(--mist);margin:0}
 .footline a{color:var(--mist);text-decoration:underline}
 .footline a:hover{color:var(--hay)}
